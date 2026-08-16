@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/bottom_navigation_screen.dart';
 import 'package:grocery_app/screens/login.dart';
 import 'package:grocery_app/widgets/buttom.dart';
 import 'package:grocery_app/widgets/custom_text_field.dart';
@@ -144,7 +145,13 @@ class SignUpScreen extends StatelessWidget {
                         text: 'Sing Up',
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            print('SingUp Successful');
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const BottomNavigationScreen(),
+                              ),
+                            );
                           }
                         },
                       ),

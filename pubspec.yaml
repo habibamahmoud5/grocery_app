@@ -61,6 +61,15 @@ flutter:
   assets:
     - assets/carrot.png
     - assets/background.png
+    - assets/banner.png
+    - assets/apple.png
+    - assets/banana.png
+    - assets/ginger.png
+    - assets/peper.png
+    - assets/pulses.png
+    - assets/rice.png
+    - assets/chicken.png
+    - assets/beef.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

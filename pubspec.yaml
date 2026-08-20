@@ -34,6 +34,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  carousel_slider: ^5.1.2
+  smooth_page_indicator: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,8 @@ flutter:
     - assets/carrot.png
     - assets/background.png
     - assets/banner.png
+    - assets/banner1.jpg
+    - assets/banner2.jpg
     - assets/apple.png
     - assets/banana.png
     - assets/ginger.png
@@ -70,6 +74,16 @@ flutter:
     - assets/rice.png
     - assets/chicken.png
     - assets/beef.png
+    - assets/bakery.png
+    - assets/beverages.png
+    - assets/dairy.png
+    - assets/meat.png
+    - assets/oil.png
+    - assets/vegetable.png
+    - assets/nectar logo.png
+    - assets/onbording.png
+    - assets/white carrot.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

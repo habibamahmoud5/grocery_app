@@ -1,10 +1,100 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/widgets/app_bar_text.dart';
+import 'package:grocery_app/widgets/custom_text_field.dart';
+import 'package:grocery_app/widgets/explore_product.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white);
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: InkWell(
+          onTap: () {
+            FocusScope.of(context).unfocus();
+          },
+          child: Padding(
+            padding: EdgeInsetsGeometry.symmetric(horizontal: 24.70),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 15),
+
+                  AppBarText(title: 'Find Products'),
+
+                  SizedBox(height: 30),
+
+                  CustomTextField(
+                    hintText: 'Search Store',
+                    prefixIcon: Icon(
+                      Icons.search_sharp,
+                      color: Color(0xff181B19),
+                    ),
+                    fillColor: Color(0xffF2F3F2),
+                  ),
+
+                  SizedBox(height: 15),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 15,
+                    mainAxisSpacing: 15,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    childAspectRatio: 0.93,
+
+                    children: [
+                      ExploreProduct(
+                        image: 'assets/vegetable.png',
+                        name: 'Fresh Fruits & Vegetable',
+                        color: const Color(0xff53B175).withOpacity(0.15),
+                        borderColor: const Color(0xff53B175),
+                      ),
+
+                      ExploreProduct(
+                        image: 'assets/oil.png',
+                        name: 'Cooking Oil & Ghee',
+                        color: const Color(0xffF8A44C).withOpacity(0.15),
+                        borderColor: const Color(0xffF8A44C),
+                      ),
+
+                      ExploreProduct(
+                        image: 'assets/meat.png',
+                        name: 'Meat & Fish',
+                        color: const Color(0xffF7A593).withOpacity(0.15),
+                        borderColor: const Color(0xffF7A593),
+                      ),
+
+                      ExploreProduct(
+                        image: 'assets/bakery.png',
+                        name: 'Bakery & Snacks',
+                        color: const Color(0xffD3B0E0).withOpacity(0.15),
+                        borderColor: const Color(0xffD3B0E0),
+                      ),
+
+                      ExploreProduct(
+                        image: 'assets/dairy.png',
+                        name: 'Dairy & Eggs',
+                        color: const Color(0xffFDE598).withOpacity(0.15),
+                        borderColor: const Color(0xffFDE598),
+                      ),
+
+                      ExploreProduct(
+                        image: 'assets/beverages.png',
+                        name: 'Beverages',
+                        color: const Color(0xffB7DFF5).withOpacity(0.15),
+                        borderColor: const Color(0xffB7DFF5),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

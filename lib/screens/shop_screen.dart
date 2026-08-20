@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/widgets/custom_slider.dart';
 import 'package:grocery_app/widgets/custom_text_field.dart';
 import 'package:grocery_app/widgets/groceries_product.dart';
 import 'package:grocery_app/widgets/product.dart';
@@ -60,17 +61,7 @@ class ShopScreen extends StatelessWidget {
                     fillColor: Color(0xffF2F3F2),
                   ),
                   SizedBox(height: 20),
-                  Container(
-                    width: double.infinity,
-                    height: 114.99,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      image: DecorationImage(
-                        image: AssetImage('assets/banner.png'),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
+                  CustomSlider(),
                   SizedBox(height: 30),
 
                   SectionTitle(title: 'Exclusive Offer'),

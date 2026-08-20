@@ -1,0 +1,42 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/on_bording_screen.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 3),
+      () => Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (BuildContext context) => OnBordingScreen()),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xff53B175),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Image.asset(
+              'assets/nectar logo.png',
+              width: 267.42,
+              height: 68.61,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

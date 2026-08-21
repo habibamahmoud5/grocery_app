@@ -9,4 +9,5 @@ A modern grocery mobile application built with Flutter.
   <img src="screenshots/singup.png" width="200">
   <img src="screenshots/shop1.png" width="200">
   <img src="screenshots/shop2.png" width="200">
+  <img src="screenshots/explore.png" width="200">
 </p>

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class Product extends StatelessWidget {
-  String image;
-  String name;
-  String quantity;
-  String price;
+  final String image;
+  final String name;
+  final String quantity;
+  final String price;
 
-  Product({
+  const Product({
     super.key,
     required this.image,
     required this.name,
@@ -18,7 +17,7 @@ class Product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 173,
       height: 248.51,
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(

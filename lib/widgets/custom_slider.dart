@@ -21,7 +21,7 @@ class _CustomSliderState extends State<CustomSlider> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: AlignmentGeometry.bottomCenter,
+      alignment: Alignment.bottomCenter,
       children: [
         CarouselSlider(
           options: CarouselOptions(

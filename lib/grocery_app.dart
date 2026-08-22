@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/login.dart';
 import 'package:grocery_app/screens/splash_screen.dart';
 
 class GroceryApp extends StatelessWidget {

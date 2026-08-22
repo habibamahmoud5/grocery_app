@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/bottom_navigation_screen.dart';
 import 'package:grocery_app/screens/login.dart';
 import 'package:grocery_app/widgets/buttom.dart';
 

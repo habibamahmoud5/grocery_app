@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/bottom_navigation_screen.dart';
-import 'package:grocery_app/screens/shop_screen.dart';
 import 'package:grocery_app/widgets/buttom.dart';
 import 'package:grocery_app/screens/sign_up.dart';
 import 'package:grocery_app/widgets/custom_text_field.dart';

@@ -18,7 +18,7 @@ class ShopScreen extends StatelessWidget {
             FocusScope.of(context).unfocus();
           },
           child: Padding(
-            padding: EdgeInsetsGeometry.symmetric(horizontal: 24.70),
+            padding: EdgeInsets.symmetric(horizontal: 24.70),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -67,29 +67,45 @@ class ShopScreen extends StatelessWidget {
                   SectionTitle(title: 'Exclusive Offer'),
 
                   SizedBox(height: 20),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Product(
-                          image: 'assets/banana.png',
-                          name: 'Organic Bananas',
-                          price: '\$4.99',
-                          quantity: '7pcs, Priceg',
-                        ),
-                      ),
-                      SizedBox(width: 15),
 
-                      Expanded(
-                        child: Product(
-                          image: 'assets/apple.png',
-                          name: 'Apple',
-                          price: '\$4.99',
-                          quantity: '1kg, priceg',
-                        ),
+                  SizedBox(
+                    height: 270,
+                    child: ListView.separated(
+                      itemBuilder: (BuildContext context, int index) => Product(
+                        image: 'assets/banana.png',
+                        name: 'Organic Bananas',
+                        price: '\$4.99',
+                        quantity: '7pcs, Priceg',
                       ),
-                    ],
+                      separatorBuilder: (BuildContext context, int index) =>
+                          SizedBox(width: 10),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 3,
+                    ),
                   ),
 
+                  // Row(
+                  //   children: [
+                  //     Expanded(
+                  //       child: Product(
+                  //         image: 'assets/banana.png',
+                  //         name: 'Organic Bananas',
+                  //         price: '\$4.99',
+                  //         quantity: '7pcs, Priceg',
+                  //       ),
+                  //     ),
+                  //     SizedBox(width: 15),
+
+                  //     Expanded(
+                  //       child: Product(
+                  //         image: 'assets/apple.png',
+                  //         name: 'Apple',
+                  //         price: '\$4.99',
+                  //         quantity: '1kg, priceg',
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                   SizedBox(height: 30),
 
                   SectionTitle(title: 'Best Selling'),

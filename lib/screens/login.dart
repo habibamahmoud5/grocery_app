@@ -114,6 +114,8 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(height: 30),
                       Buttom(
                         text: 'Log In',
+                        backgroundColor: Color(0xff53B175),
+                        foregroundColor: Colors.white,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                             Navigator.pushReplacement(

@@ -35,6 +35,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         },
         backgroundColor: Colors.white,
         selectedItemColor: Color(0xff53B175),
+        unselectedItemColor: Color(0xff181725),
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(

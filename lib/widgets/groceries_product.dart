@@ -15,6 +15,7 @@ class GroceriesProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 248,
       height: 105,
       padding: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(

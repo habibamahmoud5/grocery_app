@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   carousel_slider: ^5.1.2
   smooth_page_indicator: ^2.0.1
+  flutter_native_splash: ^2.4.8
 
 dev_dependencies:
   flutter_test:
@@ -83,6 +84,9 @@ flutter:
     - assets/nectar logo.png
     - assets/onbording.png
     - assets/white carrot.png
+    - assets/splash.png
+    - assets/orange.png
+    - assets/account photo.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

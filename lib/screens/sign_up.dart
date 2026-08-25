@@ -143,6 +143,8 @@ class SignUpScreen extends StatelessWidget {
                       SizedBox(height: 30),
                       Buttom(
                         text: 'Sing Up',
+                        backgroundColor: Color(0xff53B175),
+                        foregroundColor: Colors.white,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                             Navigator.pushReplacement(

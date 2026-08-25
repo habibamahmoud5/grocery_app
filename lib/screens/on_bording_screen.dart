@@ -10,20 +10,19 @@ class OnBordingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset('assets/onbording.png', fit: BoxFit.cover),
+          Image.asset(
+            'assets/onbording.png',
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.11),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Positioned.fill(
-                  child: Image.asset(
-                    'assets/white carrot.png',
-                    width: 48,
-                    height: 56,
-                  ),
-                ),
+                Image.asset('assets/white carrot.png', width: 48, height: 56),
 
                 const SizedBox(height: 35),
 
@@ -32,7 +31,7 @@ class OnBordingScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 48,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
 
@@ -41,7 +40,7 @@ class OnBordingScreen extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 48,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
 
@@ -57,6 +56,8 @@ class OnBordingScreen extends StatelessWidget {
 
                 Buttom(
                   text: 'Get Started',
+                  backgroundColor: Color(0xff53B175),
+                  foregroundColor: Colors.white,
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
@@ -64,7 +65,8 @@ class OnBordingScreen extends StatelessWidget {
                     );
                   },
                 ),
-                SizedBox(height: 90),
+
+                const SizedBox(height: 90),
               ],
             ),
           ),

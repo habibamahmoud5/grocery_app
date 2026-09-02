@@ -6,7 +6,7 @@ class Buttom extends StatelessWidget {
   final IconData? icon;
   final Color? backgroundColor;
   final Color? foregroundColor;
-
+  final String? price;
   const Buttom({
     super.key,
     required this.text,
@@ -14,6 +14,7 @@ class Buttom extends StatelessWidget {
     this.icon,
     this.backgroundColor,
     this.foregroundColor,
+    this.price,
   });
 
   @override
@@ -43,6 +44,22 @@ class Buttom extends StatelessWidget {
               ),
             ),
           ),
+          if (price != null)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: const Color(0xff489E67),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Text(
+                price!,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
         ],
       ),
     );

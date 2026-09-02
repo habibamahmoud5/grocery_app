@@ -5,7 +5,12 @@ import 'package:grocery_app/widgets/buttom.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   final ProductModel product;
-  const ProductDetailsScreen({super.key, required this.product});
+  final VoidCallback onBack;
+  const ProductDetailsScreen({
+    super.key,
+    required this.product,
+    required this.onBack,
+  });
 
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
@@ -20,12 +25,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       appBar: AppBar(
         backgroundColor: Color(0xffF2F3F2),
         leading: IconButton(
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => ShopScreen()),
-            );
-          },
+          onPressed: widget.onBack,
           icon: const Icon(
             Icons.arrow_back_ios_new,
             color: Color(0xff181725),

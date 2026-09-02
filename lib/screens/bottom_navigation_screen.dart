@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/models/product.dart';
 import 'package:grocery_app/screens/account_screen.dart';
 import 'package:grocery_app/screens/cart_screen.dart';
 import 'package:grocery_app/screens/explore_screen.dart';
 import 'package:grocery_app/screens/favourite_screen.dart';
+import 'package:grocery_app/screens/product_details_screen.dart';
 import 'package:grocery_app/screens/shop_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
@@ -14,6 +16,7 @@ class BottomNavigationScreen extends StatefulWidget {
 
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int currentIndex = 0;
+  ProductModel? selectedProduct;
   List<Widget> screens = [
     ShopScreen(),
     ExploreScreen(),
@@ -21,11 +24,29 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     FavouriteScreen(),
     AccountScreen(),
   ];
+  void openProductDetails(ProductModel product) {
+    setState(() {
+      selectedProduct = product;
+    });
+  }
+
+  void closeProductDetails() {
+    setState(() {
+      selectedProduct = null;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: screens[currentIndex],
+      body: selectedProduct == null
+          ? screens[currentIndex]
+          : ProductDetailsScreen(
+              product: selectedProduct!,
+              onBack: closeProductDetails,
+            ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) {

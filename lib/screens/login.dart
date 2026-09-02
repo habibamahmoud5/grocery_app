@@ -104,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       Align(
-                        alignment: AlignmentGeometry.centerRight,
+                        alignment: Alignment.centerRight,
 
                         child: Text(
                           'Forgot Password?',

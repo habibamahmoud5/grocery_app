@@ -87,7 +87,18 @@ flutter:
     - assets/splash.png
     - assets/orange.png
     - assets/account photo.png
-    
+    - assets/egg.png
+    - assets/Egg Noodles 2.png
+    - assets/Egg Noodles.png
+    - assets/Egg Pasta.png
+    - assets/Mayonnais Eggless.png
+    - assets/egg2.png
+    - assets/Coca Cola Can.png
+    - assets/Diet Coke.png
+    - assets/juice.png
+    - assets/Sprite Can.png
+    - assets/Pepsi Can.png
+    - assets/orange juice.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

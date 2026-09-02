@@ -147,8 +147,12 @@ class ShopScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    ProductDetailsScreen(product: product),
+                                builder: (context) => ProductDetailsScreen(
+                                  product: product,
+                                  onBack: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
                               ),
                             );
                           },
@@ -183,8 +187,12 @@ class ShopScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    ProductDetailsScreen(product: product),
+                                builder: (context) => ProductDetailsScreen(
+                                  product: product,
+                                  onBack: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
                               ),
                             );
                           },
@@ -246,8 +254,12 @@ class ShopScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    ProductDetailsScreen(product: product),
+                                builder: (context) => ProductDetailsScreen(
+                                  product: product,
+                                  onBack: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
                               ),
                             );
                           },

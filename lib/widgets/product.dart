@@ -34,8 +34,8 @@ class Product extends StatelessWidget {
             Center(
               child: SizedBox(
                 child: Image.asset(
-                  width: 110,
-                  height: 80,
+                  width: 100,
+                  height: 70,
                   image,
                   fit: BoxFit.contain,
                 ),
@@ -46,6 +46,8 @@ class Product extends StatelessWidget {
 
             Text(
               name,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
@@ -57,6 +59,7 @@ class Product extends StatelessWidget {
 
             Text(
               quantity,
+              maxLines: 1,
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -64,15 +67,16 @@ class Product extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 20),
-
+            Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   price,
+                  maxLines: 1,
+
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.w600,
                     color: Color(0xff181725),
                   ),

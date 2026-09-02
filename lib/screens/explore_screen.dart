@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/beverages_screen.dart';
+import 'package:grocery_app/screens/egg_screen.dart';
 import 'package:grocery_app/widgets/app_bar_text.dart';
 import 'package:grocery_app/widgets/custom_text_field.dart';
 import 'package:grocery_app/widgets/explore_product.dart';
@@ -16,7 +18,7 @@ class ExploreScreen extends StatelessWidget {
             FocusScope.of(context).unfocus();
           },
           child: Padding(
-            padding: EdgeInsetsGeometry.symmetric(horizontal: 24.70),
+            padding: EdgeInsets.symmetric(horizontal: 24.70),
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -79,6 +81,14 @@ class ExploreScreen extends StatelessWidget {
                         name: 'Dairy & Eggs',
                         color: const Color(0xffFDE598).withOpacity(0.15),
                         borderColor: const Color(0xffFDE598),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => EggScreen(),
+                            ),
+                          );
+                        },
                       ),
 
                       ExploreProduct(
@@ -86,6 +96,14 @@ class ExploreScreen extends StatelessWidget {
                         name: 'Beverages',
                         color: const Color(0xffB7DFF5).withOpacity(0.15),
                         borderColor: const Color(0xffB7DFF5),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BeveragesScreen(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

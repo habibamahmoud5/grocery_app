@@ -37,6 +37,7 @@ dependencies:
   carousel_slider: ^5.1.2
   smooth_page_indicator: ^2.0.1
   flutter_native_splash: ^2.4.8
+  modal_bottom_sheet: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -99,6 +100,7 @@ flutter:
     - assets/Sprite Can.png
     - assets/Pepsi Can.png
     - assets/orange juice.png
+    - assets/validation cheakout.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

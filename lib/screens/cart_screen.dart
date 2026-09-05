@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/widgets/app_bar_text.dart';
 import 'package:grocery_app/widgets/buttom.dart';
 import 'package:grocery_app/widgets/cart_fav_items.dart';
+import 'package:grocery_app/widgets/check_bottom_sheet.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -72,10 +73,17 @@ class CartScreen extends StatelessWidget {
                 price: '\$12.96',
                 backgroundColor: const Color(0xff53B175),
                 foregroundColor: const Color(0xffFCFCFC),
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    builder: (context) {
+                      return const CheckBottomSheet();
+                    },
+                  );
+                },
               ),
-
-              const SizedBox(height: 10),
             ],
           ),
         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/models/product.dart';
-import 'package:grocery_app/screens/shop_screen.dart';
 import 'package:grocery_app/widgets/buttom.dart';
 
 class ProductDetailsScreen extends StatefulWidget {

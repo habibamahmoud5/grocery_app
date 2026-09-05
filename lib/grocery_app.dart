@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/on_bording_screen.dart';
-import 'package:grocery_app/screens/splash_screen.dart';
 
 class GroceryApp extends StatelessWidget {
   const GroceryApp({super.key});

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/widgets/app_bar_text.dart';
 
 class CartFavItems extends StatefulWidget {
   final String image;
